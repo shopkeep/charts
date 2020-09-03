@@ -22,5 +22,11 @@ spec:
         env:
         - name: KAFKA_BROKERS
           value: {{ .Values.kafkaTrigger.env.kafkaBrokers }}
+        - name: KUBELESS_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: KUBELESS_CONFIG
+          value: kubeless-config
       serviceAccountName: controller-acct
 {{- end }}
