@@ -549,4 +549,4 @@ kafkaTrigger:
       pullPolicy: IfNotPresent
   env:
     kafkaBrokers: localhost:9092
-    KafkaEnableTls: true
+    KafkaEnableTls: "true"
