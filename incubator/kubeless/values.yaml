@@ -550,3 +550,4 @@ kafkaTrigger:
   env:
     kafkaBrokers: localhost:9092
     KafkaEnableTls: "true"
+    kafkaEnableSasl: "true"
