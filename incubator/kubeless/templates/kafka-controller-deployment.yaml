@@ -23,7 +23,7 @@ spec:
         - name: KAFKA_BROKERS
           value: {{ .Values.kafkaTrigger.env.kafkaBrokers }}
         - name: KAFKA_ENABLE_TLS
-          value: {{ .Values.kafkaTrigger.env.kafkaEnableTls }}
+          value: "true"
         - name: KUBELESS_NAMESPACE
           valueFrom:
             fieldRef:
