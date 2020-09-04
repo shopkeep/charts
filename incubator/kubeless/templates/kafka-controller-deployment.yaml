@@ -24,6 +24,12 @@ spec:
           value: {{ .Values.kafkaTrigger.env.kafkaBrokers }}
         - name: KAFKA_ENABLE_TLS
           value: "true"
+        - name: KAFKA_ENABLE_SASL
+          value: "true"
+        - name: KAFKA_USERNAME
+          value: {{ .Values.kafkaTrigger.env.kafkaSaslUsername }}
+        - name: KAFKA_USERNAME
+          value: {{ .Values.kafkaTrigger.env.kafkaSaslPassword }}
         - name: KAFKA_INSECURE
           value: "true"
         - name: KUBELESS_NAMESPACE
