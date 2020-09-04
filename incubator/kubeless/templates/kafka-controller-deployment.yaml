@@ -27,9 +27,9 @@ spec:
         - name: KAFKA_ENABLE_SASL
           value: "true"
         - name: KAFKA_USERNAME
-          value: {{ .Values.kafkaTrigger.env.kafkaSaslUsername }}
-        - name: KAFKA_USERNAME
-          value: {{ .Values.kafkaTrigger.env.kafkaSaslPassword }}
+          value: {{ .Values.kafkaTrigger.env.username }}
+        - name: KAFKA_PASSWORD
+          value: {{ .Values.kafkaTrigger.env.password }}
         - name: KAFKA_INSECURE
           value: "true"
         - name: KUBELESS_NAMESPACE
