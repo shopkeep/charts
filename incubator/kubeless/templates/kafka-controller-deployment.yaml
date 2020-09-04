@@ -28,5 +28,7 @@ spec:
               fieldPath: metadata.namespace
         - name: KUBELESS_CONFIG
           value: kubeless-config
+        - name: KUBELESS_LOG_LEVEL
+          value: DEBUG
       serviceAccountName: controller-acct
 {{- end }}
