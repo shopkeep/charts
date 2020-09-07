@@ -15,9 +15,9 @@ spec:
   - name: "ui-proxy-port-test"
     port: 3001
     protocol: TCP
-    targetPort: 3001
+    targetPort: 8080
   selector:
-    component: proxy
+    component: ui
     app: {{ template "kubeless.name"  . }}
     release: {{ .Release.Name | quote }}
   sessionAffinity: None

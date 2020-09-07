@@ -42,7 +42,7 @@ spec:
         image: "{{ .Values.ui.deployment.proxy.image.repository }}:{{ .Values.ui.deployment.proxy.image.tag }}"
         imagePullPolicy: {{ .Values.ui.deployment.proxy.image.pullPolicy }}
         ports:
-          - containerPort: 3001
+          - containerPort: 8080
             name: http-proxy
             protocol: TCP
         args:
