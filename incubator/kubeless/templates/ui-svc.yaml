@@ -17,7 +17,7 @@ spec:
     protocol: TCP
     targetPort: 3001
   selector:
-    component: ui
+    component: proxy
     app: {{ template "kubeless.name"  . }}
     release: {{ .Release.Name | quote }}
   sessionAffinity: None

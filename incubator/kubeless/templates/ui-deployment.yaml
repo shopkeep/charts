@@ -26,9 +26,6 @@ spec:
         - containerPort: 3000
           name: http
           protocol: TCP
-        - containerPort: 3001
-          name: http-proxy
-          protocol: TCP
         readinessProbe:
           httpGet:
             path: /
@@ -44,6 +41,10 @@ spec:
       - name: proxy
         image: "{{ .Values.ui.deployment.proxy.image.repository }}:{{ .Values.ui.deployment.proxy.image.tag }}"
         imagePullPolicy: {{ .Values.ui.deployment.proxy.image.pullPolicy }}
+        ports:
+          - containerPort: 3001
+            name: http-proxy
+            protocol: TCP
         args:
         - proxy
         - "-p"
