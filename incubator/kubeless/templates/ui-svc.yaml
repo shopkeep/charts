@@ -15,7 +15,7 @@ spec:
   selector:
     component: ui
     matchLabels:
-      app: {{ template "kubeless.name"  . }}
+      app: kubeless-ui
     release: {{ .Release.Name | quote }}
   sessionAffinity: None
   type: {{ .Values.ui.service.type }}
