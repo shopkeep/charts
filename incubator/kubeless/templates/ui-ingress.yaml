@@ -2,7 +2,7 @@
 {{- $fullName := include "kubeless.fullname" . -}}
 {{- $ingressPath := .Values.ui.ingress.path -}}
 {{- $portName := .Values.ui.service.name -}}
-apiVersion: extensions/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}-ui
