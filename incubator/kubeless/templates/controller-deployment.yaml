@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       kubeless: controller
+      app: controller
 
   replicas: {{ .Values.controller.deployment.replicaCount }}
   template:
