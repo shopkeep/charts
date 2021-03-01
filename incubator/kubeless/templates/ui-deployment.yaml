@@ -7,6 +7,9 @@ metadata:
 {{ include "labels.standard" . | indent 4 }}
     component: ui
 spec:
+  selector:
+    matchLabels:
+      kubeless: ui
   replicas: {{ .Values.controller.deployment.replicaCount }}
   template:
     metadata:
