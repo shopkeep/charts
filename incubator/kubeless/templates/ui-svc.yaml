@@ -14,8 +14,7 @@ spec:
     targetPort: 3000
   selector:
     component: ui
-    matchLabels:
-      app: kubeless-ui
+    app: {{ template "kubeless.name"  . }}
     release: {{ .Release.Name | quote }}
   sessionAffinity: None
   type: {{ .Values.ui.service.type }}
