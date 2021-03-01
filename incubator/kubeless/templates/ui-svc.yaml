@@ -14,7 +14,7 @@ spec:
     targetPort: 3000
   selector:
     component: ui
-    app: {{ template "kubeless.name"  . }}
+    app.kubernetes.io/name: {{ template "kubeless.name"  . }}
     release: {{ .Release.Name | quote }}
   sessionAffinity: None
   type: {{ .Values.ui.service.type }}
